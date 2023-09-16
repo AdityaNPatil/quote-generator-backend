@@ -1,0 +1,38 @@
+<!-- linking css -->
+<link rel="stylesheet" href="/styles/about.css">
+<!-- including header partial -->
+<%- include("partials/header.ejs") %>
+
+<div id="customPageBackground">
+
+    <header>
+        <h1>About Us</h1>
+        <p>Empowering you with motivation and inspiration</p>
+    </header>
+    
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>We are dedicated to spreading positivity and motivation to help individuals achieve their goals and dreams. Our mission is to provide a platform where you can generate motivational quotes or create custom ones to inspire yourself and others.</p>
+    </section>
+    
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <img src="/images/Profile.png" alt="">
+            <h3>Aditya Patil</h3>
+            <p>Founder & CEO</p>
+        </div>
+        <!-- Add more team members as needed -->
+    </section>
+    
+    <section class="quote-generator">
+        <a href="/generate"><h2>Generate Motivational Quotes</h2></a>
+        <p>Use our quote generator to discover inspiring quotes or create your own. Let motivation be your guide on your journey to success.</p>
+    </section>
+    <section class="quote-generator">
+        <a href="/custom"><h2>Create Custom Quotes</h2></a>
+        <p>Use our quote Creator to create inspiring quotes. Let yourself be your own guide on your journey to success.</p>
+    </section>
+</div>
+
+<%- include("partials/footer.ejs")  %>

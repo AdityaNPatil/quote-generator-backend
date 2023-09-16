@@ -1,0 +1,77 @@
+/* Global styles from previous CSS */
+
+/* Page-specific styles for About Us page */
+header {
+    background-color: #003049;
+    color: #eae2b7;
+    text-align: center;
+    /* padding: 20px 0; */
+    height: fit-content;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+.mission, .team, .quote-generator, .contact {
+    padding: 30px;
+    text-align: center;
+}
+
+.mission h2, .team h2, .quote-generator h2, .contact h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #dd9300;
+}
+
+.mission p, .team p, .quote-generator p, .contact p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #eae2b7;
+}
+
+.team-member {
+    margin: 20px;
+    display: block;
+    text-align: center;
+    color: #eae2b7;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.team-member p {
+    font-size: 16px;
+}
+
+.team-member img{
+    border-radius: 50%;
+    max-height: 150px;
+}
+
+
+#customPageBackground{
+    position: relative;
+    /* height: 35vw; */
+    height: fit-content;
+}
+#customPageBackground::before{
+    content: "";
+    background: url("../images/generate_custom_background.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.95;
+    height: 100%;
+    width: 100%;
+
+    filter: blur(5px);
+}

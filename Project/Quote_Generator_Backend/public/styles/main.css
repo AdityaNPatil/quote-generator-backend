@@ -1,0 +1,299 @@
+body {
+    margin: 2px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ⭕NAVBAR */
+#navbarHeader {
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #003049;
+    /* Background color */
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: fit-content;
+    width: 100vw;
+}
+
+ul.navbar li a {
+    color: #EAE2B7;
+    text-decoration: none;
+    padding: 5px;
+    /* display: block; */
+    transition: all 0.5s ease-in-out 0s;
+}
+
+ul.navbar li a:hover {
+    background-color: #FCBF49;
+    /* Hover background color */
+    border-radius: 10px;
+    /* padding: 5px; */
+    color: #003049;
+    /* Hover text color */
+    text-shadow: 5px 3px 5px #dd9300;
+}
+
+ul.navbar li img {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    filter: drop-shadow(5px 5px 0.75rem #000000);
+}
+
+/* ⭕⭕LANDING PAGE CONTENT */
+
+/* VIDEO */
+#videoLanding {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px;
+}
+
+video {
+    height: 250px;
+    width: auto;
+    border-radius: 20px;
+}
+
+/* PARAGRAPHS */
+.LandingContentDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+}
+
+.headingLandingContent {
+    font-size: 2rem;
+    color: #003049;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to right, #FFFFFF, #EAE2B7, #FCBF49, #EAE2B7, #FFFFFF);
+}
+
+.LandingContentPara {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.LandingContentPara img {
+    height: 150px;
+    width: auto;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 0.65rem #FCBF49);
+}
+
+.LandingContentPara span {
+    text-align: center;
+    padding: 10px;
+}
+
+/* ⭕FOOTER */
+footer {
+    background-color: #003049;
+    color: #EAE2B7;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer #footerContent {
+    font-size: 18px;
+    animation: motivationAnimation 4s infinite;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: fit-content;
+    width: 100vw;
+}
+
+footer ul li a {
+    color: #EAE2B7;
+    text-decoration: none;
+    padding: 5px;
+    /* display: block; */
+    transition: all 0.5s ease-in-out 0s;
+}
+
+footer ul li a img {
+    filter: invert();
+}
+
+/* Add animation keyframes for motivation */
+@keyframes motivationAnimation {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+}
+
+
+/* ⭕⭕CUSTOM QUOTE GENERATOR STYLING FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    border: 1px solid #003049;
+    border-radius: 10px;
+    position: relative;
+}
+
+form::before {
+    content: "";
+    background: url("../images/generate_custom_background.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.95;
+    height: 100%;
+    width: 100%;
+
+    filter: blur(5px);
+}
+
+label {
+    font-size: 18px;
+    color: #dd9300;
+}
+
+input[type="text"] {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #EAE2B7;
+    border-radius: 5px;
+
+    background: transparent;
+}
+
+input[type="text"]:focus {
+    border: 2px solid #dd9300;
+    color: #000000;
+    background: #ffea76;
+}
+
+input[type="submit"] {
+    background-color: #003049;
+    color: #EAE2B7;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: all 0.5s ease-in-out 0s;
+}
+
+input[type="submit"]:hover {
+    background-color: #FCBF49;
+    color: #003049;
+}
+
+/* ⭕⭕GENERATE QUOTE PAGE */
+
+/* submit button */
+/* Button CSS */
+.animated-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 3rem;
+    background-color: #003049;
+    color: #EAE2B7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.animated-button:hover {
+    background-color: #FCBF49;
+    animation: none;
+    /* Disable the bounce animation on hover */
+}
+
+/* ⭕⭕QUOTE for both generate and custom page */
+.QuoteContent {
+    margin: 10px;
+    color: #FCBF49;
+    text-align: center;
+    /* font-style: italic; */
+    font-size: 4rem;
+    font-family: 'Lobster', cursive;
+    /* font-family: 'Sacramento', cursive; */
+}
+
+.QuoteAuthor {
+    font-family: 'Sacramento', cursive;
+}
+
+/* Quote Form generate page*/
+#quoteForm {
+    margin: auto;
+    width: 50%;
+    background: transparent;
+    border: none;
+    height: 50%;
+}
+
+.GeneratePageBackground {
+    position: relative;
+    height: 35vw;
+}
+
+.GeneratePageBackground::before {
+    content: "";
+    background: url("../images/generate_custom_background.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.95;
+    height: 100%;
+    width: 100%;
+
+    filter: blur(5px);
+}

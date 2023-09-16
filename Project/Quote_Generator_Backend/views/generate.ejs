@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/styles/main.css">
+
+<!-- include header partial -->
+<%- include("partials/header.ejs")  %>
+
+<div class="GeneratePageBackground">
+
+    <!-- Including the motivational quote -->
+    <% if(locals.Quote) { %>
+        <h2 class="QuoteContent">
+            <span><%= Quote  %></span>-
+            <span class="QuoteAuthor"><%= Author %></span>
+        </h2>
+    <% } else { %>
+            <h2 class="QuoteContent">Let's Get Motivated Now!!!</h2>
+    <% } %>
+            
+            <!-- Actual button content -->
+            <form action="/generate" method="post" id="quoteForm">
+                <input type="submit" value="Generate Quote!" class="animated-button">
+            </form>
+            
+            <!-- including footer partial -->
+</div>
+
+<%- include("partials/footer.ejs")  %>

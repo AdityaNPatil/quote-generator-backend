@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="styles/main.css">
+
+<!-- include header.ejs partial -->
+<%- include("partials/header.ejs")  %>
+
+<% if(locals.myQuote) { %>
+    <h2 class="QuoteContent">
+        <span><%= myQuote  %></span>-
+        <span class="QuoteAuthor"><%= myAuthor %></span>
+    </h2>
+<% } else { %>
+        <h2 class="QuoteContent">Submit A Quote!!!</h2>
+<% } %>
+
+<form action="/custom" method="post">
+    <label for="quote">Quote:</label><br>
+    <input type="text" id="quote" name="myquote" required><br><br>
+
+    <label for="author">Author:</label><br>
+    <input type="text" id="author" name="myauthor" required><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+<%- include("partials/footer.ejs")  %>
